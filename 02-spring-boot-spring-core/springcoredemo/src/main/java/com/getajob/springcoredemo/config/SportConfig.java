@@ -1,0 +1,15 @@
+package com.getajob.springcoredemo.config;
+
+import com.getajob.springcoredemo.common.Coach;
+import com.getajob.springcoredemo.common.SwimCoach;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SportConfig {
+
+    @Bean("aquatic")
+    public Coach swimCoach(){
+        return new SwimCoach();
+    }
+}
